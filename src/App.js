@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -19,6 +19,26 @@ function App() {
           Learn React
         </a>
       </header>
+      <form name="contact" method="post">
+        <p>
+          <label>
+            Your Name: <input type="hidden" type="text" name="name" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Email: <input type="hidden" type="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message: <textarea type="hidden" name="message"></textarea>
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
     </div>
   );
 }
