@@ -19,25 +19,52 @@ function App() {
           Learn React
         </a>
       </header>
-      <form name="contact" method="post">
-        <p>
-          <label>
-            Your Name: <input type="hidden" type="text" name="name" />
+      <form action="" className="mt-8" name="contact" method="post">
+        <div>
+          <input type="hidden" name="form-name" value="contact" />
+          <label className="text-md font-bold text-gray-400 block" for="name">
+            Name
           </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="hidden" type="email" name="email" />
+          <input
+            style={{ width: 400 }}
+            type="text"
+            className="border rounded bg-transparent outline-none focus:border-custom-blue-button text-white p-2"
+            name="name"
+            required
+          />
+          <label
+            className="text-md font-bold text-gray-400 block mt-6"
+            for="email"
+          >
+            Email
           </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea type="hidden" name="message"></textarea>
+          <input
+            style={{ width: 400 }}
+            type="email"
+            className="border rounded bg-transparent outline-none focus:border-custom-blue-button text-white p-2"
+            name="email"
+            required
+          />
+          <label
+            className="text-md font-bold text-gray-400 block mt-6"
+            for="message"
+          >
+            Message
           </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+          <textarea
+            rows="4"
+            cols="60"
+            style={{ width: 400 }}
+            type="text"
+            name="message"
+            className="border rounded bg-transparent outline-none focus:border-custom-blue-button text-white p-2"
+            required
+          />
+          <input
+            type="submit"
+            className="block text-md md:text-xl font-bold text-white bg-custom-blue-button outline-none active:bg-blue-700 hover:bg-blue-500 rounded-md w-32 h-8 md:w-40 md:h-10 tracking-wide mt-6"
+          />
+        </div>
       </form>
     </div>
   );
